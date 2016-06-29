@@ -4,7 +4,8 @@
   "description": "A boilerplate for authoring npm modules",
   "main": "lib/koa-respond.js",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.0.0",
+    "npm": ">=3.7.0"
   },
   "scripts": {
     "test": "mocha test/**/*.js --require test/index.js",
@@ -28,12 +29,15 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
-    "eslint": "^2.8.0",
-    "eslint-watch": "^2.1.10",
-    "istanbul": "^0.4.3",
-    "mocha": "^2.4.5",
-    "sinon": "^1.17.3",
-    "sinon-chai": "^2.8.0"
+    "eslint": "^2.13.1",
+    "eslint-watch": "^2.1.11",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "supertest": "^1.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "is-string": "^1.0.4"
+  }
 }

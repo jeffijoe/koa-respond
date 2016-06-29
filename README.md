@@ -85,13 +85,50 @@ const respond = require('koa-respond');
 
 // Middleware to install koa-respond.
 app.use(function *(next) {
-  respond.patch(this);
+  respond().patch(this);
   yield next;
 });
 
 // Now the methods are available.
 app.use(function *() {
   this.ok(200, { id: 123, name: 'Bob' });
+});
+```
+
+## Adding additional methods
+
+If you feel like some methods are missing, you can add them yourself, like so:
+
+```js
+app.use(respond({
+  statusMethods: {
+    imATeapot: 418,
+    enhanceYourCalm: 420
+  }
+}));
+
+app.use((ctx) => {
+  ctx.imATeapot('Hello, a Teapot I am.');
+  ctx.enhanceYourCalm({ todo: 'blaze it' });
+});
+```
+
+## Even more custom methods
+
+If you just want to add shortcuts without adding an additional middleware, you can do that, too.
+
+```js
+app.use(respond({
+  methods: {
+    shizzle: (ctx, message) => {
+      ctx.respond(200, message + ', fo-shizzle');
+    }
+  }
+}));
+
+app.use((ctx) => {
+  // HTTP 200 { message: 'Koa is the best, fo-shizzle' }
+  ctx.shizzle('Koa is the best');
 });
 ```
 
