@@ -67,7 +67,7 @@ All methods call the `respond` method with the corresponding status code as well
 
 * `ok` - `HTTP 200`
 * `created` - `HTTP 201`
-* `noContent` - `HTTP 204`
+* `noContent` - `HTTP 204` - **always sends an empty response!**
 * `badRequest` - `HTTP 400`
 * `unauthorized` - `HTTP 401`
 * `forbidden` - `HTTP 403`
