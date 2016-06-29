@@ -34,9 +34,8 @@ app.use((ctx) => {
   ctx.notFound('Not found, boii');
   ctx.notFound({ message: 'Not found, boii' });
 
-  // You can also send errors.
-  // Becomes `{ message: 'not good enough', stack: '<the stack trace>' }`
-  ctx.badRequest(new Error('not good enough'));
+  // And everyone's favorite..
+  ctx.badRequest({ error: 'missing input' });
 
   // Or if you prefer to do it yourself..
   // Both of these send a HTTP 201 with a body
