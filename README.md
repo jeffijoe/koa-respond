@@ -91,7 +91,7 @@ app.use(function *(next) {
 
 // Now the methods are available.
 app.use(function *() {
-  this.ok(200, { id: 123, name: 'Bob' });
+  this.ok({ id: 123, name: 'Bob' });
 });
 ```
 
