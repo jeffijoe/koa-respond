@@ -1,6 +1,11 @@
 'use strict';
 
-const respond = require('../../lib/respond');
+const makeRespond = require('../../lib/respond');
+
+const respond = makeRespond();
+const respondNoAutomessage = makeRespond({
+  autoMessage: false
+});
 
 describe('respond', function() {
   let ctx;
@@ -37,6 +42,13 @@ describe('respond', function() {
       respond(ctx, 200, obj);
       ctx.status.should.equal(200);
       ctx.body.should.deep.equal(obj);
+    });
+  });
+
+  describe('when autoMessage = false', function() {
+    it('does not wrap strings', function() {
+      respondNoAutomessage(ctx, 200, 'Hello world');
+      ctx.body.should.equal('Hello world');
     });
   });
 });

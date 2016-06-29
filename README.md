@@ -62,6 +62,14 @@ All methods call the `respond` method with the corresponding status code as well
   ctx.respond(200, { id: 123, name: 'new entity' });
   ```
 
+If you wish to disable the automatic wrapping of strings globally, you can instantiate `koa-respond` with `autoMessage: false`.
+
+```js
+app.use(respond({
+  autoMessage: false
+}))
+```
+
 ### Available methods
 
 * `ok` - `HTTP 200`
