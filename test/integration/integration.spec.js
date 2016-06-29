@@ -32,8 +32,8 @@ for (const method in respond.statusCodeMap) {
 }
 
 describe('ctx.noContent', function() {
-  it(`sets the code to 204 and has no content`, function() {
-    return request.get(`/noContent`)
+  it('sets the code to 204 and has no content', function() {
+    return request.get('/noContent')
       .expect(204)
       .end(res => {
         expect(res.body).to.be.null;
