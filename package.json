@@ -1,6 +1,6 @@
 {
   "name": "koa-respond",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "A boilerplate for authoring npm modules",
   "main": "lib/koa-respond.js",
   "engines": {
