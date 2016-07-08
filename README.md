@@ -40,26 +40,26 @@ app.use((ctx) => {
   // Or if you prefer to do it yourself..
   // Both of these send a HTTP 201 with a body
   // of `{ message: 'new beginnings!' }`
-  ctx.respond(201, 'new beginnings!');
-  ctx.respond(201, { message: 'new beginnings!' });
+  ctx.send(201, 'new beginnings!');
+  ctx.send(201, { message: 'new beginnings!' });
 });
 ```
 
 ## Methods
 
-All methods call the `respond` method with the corresponding status code as well as the body. That means they support the same overloads as `respond`:
+All methods call the `send` method with the corresponding status code as well as the body. That means they support the same overloads as `send`:
 
 * With a string; wraps it in an object with a `message` property. That means the following 2 calls do the same thing:
 
   ```js
-  ctx.respond(400, 'lol no');
-  ctx.respond(400, { message: 'lol no' });
+  ctx.send(400, 'lol no');
+  ctx.send(400, { message: 'lol no' });
   ```
 
 * With an object; sends the object as JSON.
 
   ```js
-  ctx.respond(200, { id: 123, name: 'new entity' });
+  ctx.send(200, { id: 123, name: 'new entity' });
   ```
 
 If you wish to disable the automatic wrapping of strings globally, you can instantiate `koa-respond` with `autoMessage: false`.
@@ -128,7 +128,7 @@ If you just want to add shortcuts without adding an additional middleware, you c
 app.use(respond({
   methods: {
     shizzle: (ctx, message) => {
-      ctx.respond(200, message + ', fo-shizzle');
+      ctx.send(200, message + ', fo-shizzle');
     }
   }
 }));

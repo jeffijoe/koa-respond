@@ -18,15 +18,15 @@ describe('koa-respond', function() {
     expect(respond).to.exist;
   });
 
-  it('adds a respond method', function() {
+  it('adds a send method', function() {
     use(respond());
-    ctx.respond.should.be.a.function;
+    ctx.send.should.be.a.function;
   });
 
   describe('ctx.respond', function() {
     it('sets the status and body', function() {
       use(respond());
-      ctx.respond(200, { id: 123 });
+      ctx.send(200, { id: 123 });
       ctx.status.should.equal(200);
       ctx.body.should.deep.equal({ id: 123 });
     });
@@ -57,7 +57,7 @@ describe('koa-respond', function() {
         methods: {
           caps: (input, message) => {
             input.should.equal(ctx);
-            input.respond(200, message.toUpperCase());
+            input.send(200, message.toUpperCase());
           }
         }
       }));
