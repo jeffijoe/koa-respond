@@ -1,11 +1,14 @@
 # koa-respond
 
-[![npm version](https://badge.fury.io/js/koa-respond.svg)](https://badge.fury.io/js/koa-respond)
-[![Dependency Status](https://david-dm.org/jeffijoe/koa-respond.svg)](https://david-dm.org/jeffijoe/koa-respond)
-[![devDependency Status](https://david-dm.org/jeffijoe/koa-respond/dev-status.svg)](https://david-dm.org/jeffijoe/koa-respond#info=devDependencies)
-[![Build Status](https://travis-ci.org/jeffijoe/koa-respond.svg?branch=master)](https://travis-ci.org/jeffijoe/koa-respond)
-[![Coverage Status](https://coveralls.io/repos/github/jeffijoe/koa-respond/badge.svg?branch=master)](https://coveralls.io/github/jeffijoe/koa-respond?branch=master)
-[![Code Climate](https://codeclimate.com/github/jeffijoe/koa-respond/badges/gpa.svg)](https://codeclimate.com/github/jeffijoe/koa-respond)
+[![npm](https://img.shields.io/npm/v/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
+[![dependency Status](https://img.shields.io/david/jeffijoe/koa-respond.svg?maxAge=1000)](https://david-dm.org/jeffijoe/koa-respond)
+[![devDependency Status](https://img.shields.io/david/dev/jeffijoe/koa-respond.svg?maxAge=1000)](https://david-dm.org/jeffijoe/koa-respond)
+[![Build Status](https://img.shields.io/travis/jeffijoe/koa-respond.svg?maxAge=1000)](https://travis-ci.org/jeffijoe/koa-respond)
+[![Coveralls](https://img.shields.io/coveralls/jeffijoe/koa-respond.svg?maxAge=1000)](https://coveralls.io/github/jeffijoe/koa-respond)
+[![Code Climate](https://img.shields.io/codeclimate/github/jeffijoe/koa-respond.svg?maxAge=1000)](https://codeclimate.com/github/jeffijoe/koa-respond)
+[![npm](https://img.shields.io/npm/dt/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
+[![npm](https://img.shields.io/npm/l/koa-respond.svg?maxAge=1000)](https://github.com/jeffijoe/koa-respond/blob/master/LICENSE.md)
+[![node](https://img.shields.io/node/v/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
 
 Middleware for Koa that adds useful methods to the Koa context.
 
