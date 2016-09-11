@@ -1,14 +1,15 @@
 # koa-respond
 
-[![npm](https://img.shields.io/npm/v/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
-[![dependency Status](https://img.shields.io/david/jeffijoe/koa-respond.svg?maxAge=1000)](https://david-dm.org/jeffijoe/koa-respond)
-[![devDependency Status](https://img.shields.io/david/dev/jeffijoe/koa-respond.svg?maxAge=1000)](https://david-dm.org/jeffijoe/koa-respond)
-[![Build Status](https://img.shields.io/travis/jeffijoe/koa-respond.svg?maxAge=1000)](https://travis-ci.org/jeffijoe/koa-respond)
-[![Coveralls](https://img.shields.io/coveralls/jeffijoe/koa-respond.svg?maxAge=1000)](https://coveralls.io/github/jeffijoe/koa-respond)
-[![Code Climate](https://img.shields.io/codeclimate/github/jeffijoe/koa-respond.svg?maxAge=1000)](https://codeclimate.com/github/jeffijoe/koa-respond)
-[![npm](https://img.shields.io/npm/dt/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
-[![npm](https://img.shields.io/npm/l/koa-respond.svg?maxAge=1000)](https://github.com/jeffijoe/koa-respond/blob/master/LICENSE.md)
-[![node](https://img.shields.io/node/v/koa-respond.svg?maxAge=1000)](https://www.npmjs.com/package/koa-respond)
+[![npm](https://img.shields.io/npm/v/koa-respond.svg)](https://www.npmjs.com/package/koa-respond)
+[![dependency Status](https://img.shields.io/david/jeffijoe/koa-respond.svg)](https://david-dm.org/jeffijoe/koa-respond)
+[![devDependency Status](https://img.shields.io/david/dev/jeffijoe/koa-respond.svg)](https://david-dm.org/jeffijoe/koa-respond)
+[![Build Status](https://img.shields.io/travis/jeffijoe/koa-respond.svg)](https://travis-ci.org/jeffijoe/koa-respond)
+[![Coveralls](https://img.shields.io/coveralls/jeffijoe/koa-respond.svg)](https://coveralls.io/github/jeffijoe/koa-respond)
+[![Code Climate](https://img.shields.io/codeclimate/github/jeffijoe/koa-respond.svg)](https://codeclimate.com/github/jeffijoe/koa-respond)
+[![npm](https://img.shields.io/npm/dt/koa-respond.svg)](https://www.npmjs.com/package/koa-respond)
+[![license](https://img.shields.io/npm/l/koa-respond.svg)](https://github.com/jeffijoe/koa-respond/blob/master/LICENSE.md)
+[![node](https://img.shields.io/node/v/koa-respond.svg)](https://www.npmjs.com/package/koa-respond)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Middleware for Koa that adds useful methods to the Koa context.
 

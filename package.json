@@ -1,7 +1,7 @@
 {
   "name": "koa-respond",
   "version": "1.0.0",
-  "description": "A boilerplate for authoring npm modules",
+  "description": "Add useful methods to the Koa context for sending a response",
   "main": "lib/koa-respond.js",
   "engines": {
     "node": ">=4.0.0",
@@ -16,6 +16,9 @@
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test/**/*.js --require test/index.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "do-publish": "npm run lint && npm run cover && npm publish"
   },
+  "files": [
+    "lib/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffijoe/koa-respond.git"
@@ -29,16 +32,19 @@
   "homepage": "https://github.com/jeffijoe/koa-respond#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "coveralls": "^2.11.9",
-    "eslint": "^2.13.1",
-    "eslint-watch": "^2.1.11",
-    "istanbul": "^0.4.4",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "eslint-watch": "^2.1.14",
+    "istanbul": "^0.4.5",
     "koa": "^2.0.0",
     "koa-router": "^7.0.1",
-    "mocha": "^2.5.3",
-    "sinon": "^1.17.4",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
-    "supertest": "^1.2.0"
+    "supertest": "^2.0.0"
   },
   "dependencies": {
     "is-string": "^1.0.4"
