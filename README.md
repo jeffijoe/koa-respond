@@ -74,6 +74,18 @@ app.use(respond({
 }))
 ```
 
+All functions return the Koa context itself (chainable)
+
+```js
+ctx.ok().set({ 'X-Some-Header': 'awesome' })
+```
+
+All functions are also bound to the context. This means you can pass the function as a reference without having to bind it first.
+
+```js
+app.use((ctx) => somePromiseCall().then(ctx.ok))
+```
+
 ### Available methods
 
 * `ok` - `HTTP 200`
