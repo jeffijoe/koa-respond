@@ -1,12 +1,11 @@
 language: node_js
 node_js:
   # Supported versions
-  - "stable"
-  - "5"
+  - 'stable'
+  - '8'
 
 # Lint errors should trigger a failure.
 before_script: npm run lint
 
 # Code coverage
-after_success:
-  npm run coveralls
+after_success: npm run coveralls

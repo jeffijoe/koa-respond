@@ -1,30 +1,30 @@
 'use strict'
 const respond = require('../../lib/koa-respond')
 
-describe('koa-respond', function () {
+describe('koa-respond', function() {
   let ctx
 
-  function use (middleware) {
+  function use(middleware) {
     middleware(ctx, () => Promise.resolve())
   }
 
-  beforeEach(function () {
+  beforeEach(function() {
     ctx = {
       status: 404
     }
   })
 
-  it('exists', function () {
+  it('exists', function() {
     expect(respond).to.exist
   })
 
-  it('adds a send method', function () {
+  it('adds a send method', function() {
     use(respond())
-    ctx.send.should.be.a.function
+    ctx.send.should.be.a('function')
   })
 
-  describe('ctx.respond', function () {
-    it('sets the status and body', function () {
+  describe('ctx.respond', function() {
+    it('sets the status and body', function() {
       use(respond())
       ctx.send(200, { id: 123 })
       ctx.status.should.equal(200)
@@ -32,14 +32,16 @@ describe('koa-respond', function () {
     })
   })
 
-  describe('statusMethods option', function () {
-    it('adds custom methods', function () {
-      use(respond({
-        statusMethods: {
-          imATeapot: 418,
-          nope: 503
-        }
-      }))
+  describe('statusMethods option', function() {
+    it('adds custom methods', function() {
+      use(
+        respond({
+          statusMethods: {
+            imATeapot: 418,
+            nope: 503
+          }
+        })
+      )
 
       ctx.imATeapot('funny')
       ctx.status.should.equal(418)
@@ -51,16 +53,18 @@ describe('koa-respond', function () {
     })
   })
 
-  describe('methods option', function () {
-    it('adds custom methods', function () {
-      use(respond({
-        methods: {
-          caps: (input, message) => {
-            input.should.equal(ctx)
-            input.send(200, message.toUpperCase())
+  describe('methods option', function() {
+    it('adds custom methods', function() {
+      use(
+        respond({
+          methods: {
+            caps: (input, message) => {
+              input.should.equal(ctx)
+              input.send(200, message.toUpperCase())
+            }
           }
-        }
-      }))
+        })
+      )
 
       ctx.caps('never gonna give you up')
       ctx.status.should.equal(200)
@@ -71,8 +75,8 @@ describe('koa-respond', function () {
   // Generate tests for the built-in status codes.
   for (const method in respond.statusCodeMap) {
     const code = respond.statusCodeMap[method]
-    describe(`ctx.${method}`, function () {
-      it(`sets the status to ${code}`, function () {
+    describe(`ctx.${method}`, function() {
+      it(`sets the status to ${code}`, function() {
         use(respond())
         ctx[method]({ id: 123 })
         ctx.status.should.equal(code)
