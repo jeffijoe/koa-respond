@@ -10,6 +10,8 @@
 [![license](https://img.shields.io/npm/l/koa-respond.svg)](https://github.com/jeffijoe/koa-respond/blob/master/LICENSE.md)
 [![node](https://img.shields.io/node/v/koa-respond.svg)](https://www.npmjs.com/package/koa-respond)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+<a href="https://communityinviter.com/apps/koa-js/koajs" rel="KoaJs Slack Community">![KoaJs Slack](https://img.shields.io/badge/Koa.Js-Slack%20Channel-Slack.svg?longCache=true&style=for-the-badge)</a>
+
 
 Middleware for Koa that adds useful methods to the Koa context.
 
