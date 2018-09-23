@@ -1,5 +1,9 @@
 # Changelog
 
+- 2.1.0
+
+  - Add `.locked()` (HTTP 423) and `.notImplemented()` (HTTP 501) ([#4](/pull/4) — [crobinson42](https://github.com/crobinson42))
+
 - 2.0.0
 
   - Update packages and set minimum Node version to 8 (LTS at time of release).
