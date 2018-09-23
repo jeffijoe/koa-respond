@@ -97,7 +97,9 @@ app.use((ctx) => somePromiseCall().then(ctx.ok))
 * `unauthorized` - `HTTP 401`
 * `forbidden` - `HTTP 403`
 * `notFound` - `HTTP 404`
+* `locked` - `HTTP 423`
 * `internalServerError` - `HTTP 500`
+* `notImplemented` - `HTTP 501`
 
 ## Does this work for Koa 1?
 
